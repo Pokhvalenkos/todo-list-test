@@ -13,14 +13,14 @@ router.get("/", (req: Request, res: Response) => {
 });
 
 router.post("/", (req: Request, res: Response) => {
-  const title = req.body;
+  const { title } = req.body;
   const newTask: Task = { id: uuidv4(), title, completed: false };
 
   tasks.push(newTask);
   res.status(201).json(newTask);
 });
 
-router.delete("/", (req: Request, res: Response) => {
+router.delete("/:id", (req: Request, res: Response) => {
   const { id } = req.params;
 
   tasks = tasks.filter((task) => task.id !== id);
