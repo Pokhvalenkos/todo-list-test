@@ -7,7 +7,7 @@ interface Props {
   onDelete: (id: string) => void;
 }
 
-const TodoList: React.FC<Props> = ({ todos, onDelete }) => {
+const TodoList: React.FC<Props> = ({ todos, onDelete, onToggle }) => {
   return (
     <ul>
       <ul>
@@ -15,7 +15,12 @@ const TodoList: React.FC<Props> = ({ todos, onDelete }) => {
           <li>No todos yet</li>
         ) : (
           todos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} onDelete={onDelete} />
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              onDelete={onDelete}
+              onToggle={onToggle}
+            />
           ))
         )}
       </ul>

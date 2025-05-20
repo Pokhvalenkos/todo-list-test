@@ -1,6 +1,6 @@
 const BASE_URL = "http://localhost:3000";
 
-type RequestMethod = "GET" | "POST" | "DELETE";
+type RequestMethod = "GET" | "POST" | "PATCH" | "DELETE";
 
 function request<T>(
   url: string,
@@ -30,5 +30,6 @@ function request<T>(
 export const client = {
   get: <T>(url: string) => request<T>(url, "GET"),
   post: <T>(url: string, data: any) => request<T>(url, "POST", data),
+  patch: <T>(url: string, data: any) => request<T>(url, "PATCH", data),
   delete: (url: string) => request(url, "DELETE"),
 };

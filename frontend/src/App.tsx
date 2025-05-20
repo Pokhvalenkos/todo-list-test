@@ -5,40 +5,31 @@ import { Todo } from "./types/Todo";
 import "./styles/main.scss";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import { useTodoHandlers } from "./handlers/useTodoHandlers";
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
+  const { handleAdd, handleDelete, handleToggleCompleted } = useTodoHandlers(
+    todos,
+    setTodos
+  );
 
   useEffect(() => {
     client
-      .get<Todo[]>("/todos")
+      .get<Todo[]>("/tasks")
       .then(setTodos)
       .catch(() => alert("Failed to load todos"));
   }, []);
-
-  const handleAdd = async (title: string) => {
-    try {
-      const newTodo = await client.post("/todos", { title, completed: false });
-      setTodos((prev) => [...prev, newTodo]);
-    } catch {
-      alert("Failed to add todo");
-    }
-  };
-
-  const handleDelete = async (id: string) => {
-    try {
-      await client.delete(`/todos/${id}`);
-      setTodos((prev) => prev.filter((todo) => todo.id !== id));
-    } catch {
-      alert("Failed to delete todo");
-    }
-  };
 
   return (
     <div>
       <h1>Todo List</h1>
       <TodoForm onAdd={handleAdd} />
-      <TodoList todos={todos} onDelete={handleDelete} />
+      <TodoList
+        todos={todos}
+        onDelete={handleDelete}
+        onToggle={handleToggleCompleted}
+      />
     </div>
   );
 }
