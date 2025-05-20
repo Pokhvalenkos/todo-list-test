@@ -6,11 +6,11 @@ import cors from "cors";
 dotenv.config();
 
 const app = express();
-app.use(cors());
 const PORT = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
-app.use("/todos", tasksRouter);
+app.use("/tasks", tasksRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
