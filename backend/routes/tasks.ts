@@ -4,8 +4,8 @@ import { Task } from "../models/task";
 
 const router = Router();
 let tasks: Task[] = [
-  { id: "1", title: "firstTask" },
-  { id: "2", title: "secondTask" },
+  { id: "1", title: "firstTask", completed: false },
+  { id: "2", title: "secondTask", completed: false },
 ];
 
 router.get("/", (req: Request, res: Response) => {
@@ -14,7 +14,7 @@ router.get("/", (req: Request, res: Response) => {
 
 router.post("/", (req: Request, res: Response) => {
   const title = req.body;
-  const newTask: Task = { id: uuidv4(), title };
+  const newTask: Task = { id: uuidv4(), title, completed: false };
 
   tasks.push(newTask);
   res.status(201).json(newTask);
