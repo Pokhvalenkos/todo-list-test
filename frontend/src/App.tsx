@@ -11,14 +11,14 @@ function App() {
 
   useEffect(() => {
     client
-      .get<Todo[]>("/")
+      .get<Todo[]>("/todos")
       .then(setTodos)
       .catch(() => alert("Failed to load todos"));
   }, []);
 
   const handleAdd = async (title: string) => {
     try {
-      const newTodo = await client.post("/", { title, completed: false });
+      const newTodo = await client.post("/todos", { title, completed: false });
       setTodos((prev) => [...prev, newTodo]);
     } catch {
       alert("Failed to add todo");
@@ -27,7 +27,7 @@ function App() {
 
   const handleDelete = async (id: string) => {
     try {
-      await client.delete(`/${id}`);
+      await client.delete(`/todos/${id}`);
       setTodos((prev) => prev.filter((todo) => todo.id !== id));
     } catch {
       alert("Failed to delete todo");

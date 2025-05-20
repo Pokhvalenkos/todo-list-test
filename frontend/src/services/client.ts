@@ -21,6 +21,8 @@ function request<T>(
       throw new Error("API error");
     }
 
+    if (res.status === 204) return;
+
     return res.json();
   });
 }
