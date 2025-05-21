@@ -9,20 +9,28 @@ interface Props {
 
 const TodoItem: React.FC<Props> = ({ todo, onDelete, onToggle }) => {
   return (
-    <li>
-      <label>
+    <li className="w-[90%] max-w-xl mx-auto flex items-center justify-between p-3 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow transition-all duration-300 scale-100 hover:scale-[1.01]">
+      <label className="flex items-center gap-3 flex-1">
         <input
           type="checkbox"
+          className="w-5 h-5 accent-blue-500"
           checked={todo.completed}
           onChange={() => onToggle(todo.id)}
         />
         <span
-          style={{ textDecoration: todo.completed ? "line-through" : "none" }}
+          className={`text-base ${
+            todo.completed ? "line-through text-gray-400" : "text-gray-800"
+          }`}
         >
           {todo.title}
         </span>
-        <button onClick={() => onDelete(todo.id)}>❌</button>
       </label>
+      <button
+        onClick={() => onDelete(todo.id)}
+        className="text-red-500 text-xl hover:scale-110 transition-transform"
+      >
+        ❌
+      </button>
     </li>
   );
 };
