@@ -23,6 +23,11 @@ router.get("/", async (req: Request, res: Response) => {
 
 router.post("/", async (req: Request, res: Response) => {
   const { title } = req.body;
+
+  if (!title || typeof title !== "string") {
+    return res.status(400).json({ error: "Title is required" });
+  }
+
   const tasks = await readTasks();
   const newTask: Task = { id: uuidv4(), title, completed: false };
 
