@@ -6,17 +6,18 @@ A clean and minimalistic Todo list application built with **React + TypeScript**
 
 ## 🚀 Features
 
-- Add new tasks
-- Delete tasks
+- Add new todos
+- Delete todos
 - Toggle completed status
 - Styled with Tailwind for smooth UI
 
 ---
 
-## 🧰 Technologies
+## 🛠️ Technologies
 
-- Frontend: React, TypeScript, TailwindCSS, Vite
-- Backend: Express, Node.js, TypeScript
+- **Frontend**: React, TypeScript, TailwindCSS, Vite
+- **Backend**: Express, Node.js, TypeScript
+- **Testing**: [Jest](https://jestjs.io/), React Testing Library, Supertest
 
 ---
 
@@ -38,14 +39,52 @@ cd ../backend
 npm install
 ```
 
-### 3. Run the app
+---
+
+## ▶️ Running the App
+
+### Start backend
 
 ```bash
-# Start backend
 cd backend
 npm run dev
+```
 
-# Start frontend (in separate terminal)
+### Start frontend (in separate terminal)
+
+```bash
 cd frontend
 npm run dev
 ```
+
+---
+
+## 🧪 Running Tests
+
+### Frontend (React + Jest + RTL)
+
+```bash
+cd frontend
+npm test
+```
+
+📦 Tested with:
+
+- [`Jest`](https://jestjs.io/)
+- [`@testing-library/react`](https://testing-library.com/)
+- [`@types/jest`](https://www.npmjs.com/package/@types/jest)
+
+### Backend (Express + Jest + Supertest)
+
+```bash
+cd backend
+npm test
+```
+
+📦 Tested with:
+
+- [`Jest`](https://jestjs.io/)
+- [`Supertest`](https://www.npmjs.com/package/supertest)
+- [`ts-jest`](https://www.npmjs.com/package/ts-jest)
+
+---
