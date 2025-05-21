@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 type RequestMethod = "GET" | "POST" | "PATCH" | "DELETE";
 
@@ -16,7 +16,7 @@ function request<T>(
     };
   }
 
-  return fetch(BASE_URL + url, options).then((res) => {
+  return fetch(`${BASE_URL}${url}`, options).then((res) => {
     if (!res.ok) {
       throw new Error("API error");
     }
