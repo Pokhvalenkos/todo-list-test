@@ -5,127 +5,13 @@
     "completed": false
   },
   {
+    "id": "2",
+    "title": "secondTask",
+    "completed": true
+  },
+  {
     "id": "3",
     "title": "thirdTask",
-    "completed": true
-  },
-  {
-    "id": "5e5ae4f5-8f7d-4cdf-b20e-e4e29d06cb7e",
-    "title": "Hey",
-    "completed": false
-  },
-  {
-    "id": "0481def7-ee61-451d-882d-8fa6a0064ea5",
-    "title": "Hello",
-    "completed": false
-  },
-  {
-    "id": "70a60c19-2ecd-4a36-bb7d-9dda8dfcdd05",
-    "completed": false
-  },
-  {
-    "id": "b2faf7bb-c0d0-43fa-9a7c-8b909364bca5",
-    "completed": false
-  },
-  {
-    "id": "4133dd2a-b123-4c22-b30d-2833781c6185",
-    "completed": false
-  },
-  {
-    "id": "097e003d-76ed-44e8-915c-3337f0781945",
-    "completed": false
-  },
-  {
-    "id": "89439af4-64df-4f09-bed1-42c56ca30a57",
-    "completed": false
-  },
-  {
-    "id": "d0369636-1139-4c17-86ca-8cf2700311c3",
-    "completed": false
-  },
-  {
-    "id": "96005aad-3bae-4621-9560-6e5a2b6a7312",
-    "completed": false
-  },
-  {
-    "id": "73782278-4ecc-4ceb-9e81-20e5ad0bee2e",
-    "completed": false
-  },
-  {
-    "id": "fa6ad7e9-6237-4610-a111-b9ecaf368683",
-    "completed": false
-  },
-  {
-    "id": "24126279-cc42-4ed5-8ef8-7b95e4be77c0",
-    "title": "Нове завдання",
-    "completed": false
-  },
-  {
-    "id": "666e140f-f05c-4d51-9945-9df1a0e8e3de",
-    "completed": false
-  },
-  {
-    "id": "a06ed532-a9dd-4e3b-af56-2f68d1c4bb77",
-    "completed": false
-  },
-  {
-    "id": "ee0518a8-6cd8-4c04-b580-4bbf40bb2cd2",
-    "title": "Нове завдання",
-    "completed": false
-  },
-  {
-    "id": "36040de6-3cec-459e-bd54-0a4ffe9a6ac9",
-    "title": "Нове завдання",
-    "completed": false
-  },
-  {
-    "id": "6fe75197-8c5c-4b8b-8672-cc69abe16e4d",
-    "title": "Нове завдання",
-    "completed": false
-  },
-  {
-    "id": "ae277247-aa70-48bf-bebb-e157751b1fe8",
-    "title": "Тест статусу",
-    "completed": true
-  },
-  {
-    "id": "95ba0500-7888-422f-9df4-6249ed1265e0",
-    "title": "Нове завдання",
-    "completed": false
-  },
-  {
-    "id": "e9fa8b0d-c934-46e1-aa1c-5b0d297136d1",
-    "title": "Тест статусу",
-    "completed": true
-  },
-  {
-    "id": "f5beb126-fb55-420a-8e2b-46210f11f87d",
-    "title": "Нове завдання",
-    "completed": false
-  },
-  {
-    "id": "989eae65-6757-4ba7-8d81-c7119c1ac799",
-    "title": "Тест статусу",
-    "completed": true
-  },
-  {
-    "id": "0bc48d8a-6030-41d7-8616-2abbc437cda7",
-    "title": "Нове завдання",
-    "completed": false
-  },
-  {
-    "id": "ad4fff3a-1079-470e-802c-c714343a0dee",
-    "title": "Тест статусу",
-    "completed": true
-  },
-  {
-    "id": "c8e0607d-ac3a-4214-b454-679152ea4c21",
-    "title": "Нове завдання",
-    "completed": false
-  },
-  {
-    "id": "4478728d-1c09-4603-b7b2-a4df1eb5c65f",
-    "title": "Тест статусу",
     "completed": true
   }
 ]
